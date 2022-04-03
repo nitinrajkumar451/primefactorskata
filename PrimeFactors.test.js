@@ -54,5 +54,20 @@ describe("Prime factors", () => {
         // assert
         expect(result).toStrictEqual([3,3]);
       });
+      test('Prime factors of 10 should return [2,5]', () => {
+        // arrange and act
+        var result = primeFactors(10); 
+        // assert
+        expect(result).toStrictEqual([2,5]);
+      });
+      test('Prime factors of 2*5*6*8*27*11*13 should return [2,2,2,2,2,3,3,3,3,5,11,13]', () => {
+            var result = primeFactors(2*5*6*8*27*11*13); 
+            expect(result).toStrictEqual([2,2,2,2,2,3,3,3,3,5,11,13]);
+      });
+      test('Prime factors of "a" should return "Input must be an integer greater than or equal to 1"', () => {
+          var result = primeFactors(2*5*6*8*27*11*13); 
+          expect(result).toThrow(TypeError);
+          expect(result).toThrow("Input must be an integer greater than or equal to 1");
+      });
    })
 
