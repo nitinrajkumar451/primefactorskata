@@ -1,11 +1,19 @@
 {
   "name": "primefactors",
   "version": "1.0.0",
-  "description": "",
   "main": "PrimeFactors.js",
   "scripts": {
     "test": "jest"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitinrajkumar451/primefactorskata.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nitinrajkumar451/primefactorskata/issues"
+  },
+  "homepage": "https://github.com/nitinrajkumar451/primefactorskata#readme",
+  "description": ""
 }
