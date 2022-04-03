@@ -64,10 +64,17 @@ describe("Prime factors", () => {
             var result = primeFactors(2*5*6*8*27*11*13); 
             expect(result).toStrictEqual([2,2,2,2,2,3,3,3,3,5,11,13]);
       });
-      test('Prime factors of "a" should return "Input must be an integer greater than or equal to 1"', () => {
-          var result = primeFactors(2*5*6*8*27*11*13); 
-          expect(result).toThrow(TypeError);
-          expect(result).toThrow("Input must be an integer greater than or equal to 1");
+      test('Prime factors of "a" should return "Input must be a finite integer greater than or equal to 1"', () => {
+          var result = primeFactors('a'); 
+          expect(result).toStrictEqual("Input must be a finite integer greater than or equal to 1");
       });
+      test('Prime factors of "a" should return "Input must be a finite integer greater than or equal to 1"', () => {
+        var result = primeFactors(1/0); 
+        expect(result).toStrictEqual("Input must be a finite integer greater than or equal to 1");
+    });
+    test('Prime factors of "a" should return "Input must be a finite integer greater than or equal to 1"', () => {
+        var result = primeFactors(-1); 
+        expect(result).toStrictEqual("Input must be a finite integer greater than or equal to 1");
+    });
    })
 

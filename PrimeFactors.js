@@ -1,17 +1,21 @@
 function primeFactors(n){
-    
-    var factors= [];
-    var remainder =n;
-    var divisor = 2;
-    while (n>1)
+    if(Number.isInteger(n) && n>=1)
     {
-        while(n%divisor==0)
+    var factors= [];
+    var divisor = 2;
+     while (n>1)
         {
-        factors.push(divisor);
-        n=n/divisor;        
-        }
-        divisor++;
-    }   
-    return factors;
+            while(n%divisor==0)
+            {
+            factors.push(divisor);
+            n=n/divisor;        
+            }
+            divisor++;
+        }   
+        return factors;
+        
+    } 
+    else
+        return "Input must be a finite integer greater than or equal to 1";           
 }
    module.exports = primeFactors
