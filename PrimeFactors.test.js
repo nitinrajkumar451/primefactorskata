@@ -48,5 +48,11 @@ describe("Prime factors", () => {
         // assert
         expect(result).toStrictEqual([2,2,2]);
       });
+      test('Prime factors of 9 should return [3,3]', () => {
+        // arrange and act
+        var result = primeFactors(9); 
+        // assert
+        expect(result).toStrictEqual([3,3]);
+      });
    })
 

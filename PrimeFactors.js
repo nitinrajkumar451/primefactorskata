@@ -1,22 +1,20 @@
 function primeFactors(n){
     var factors= [];
-    if (n>1)
+    var remainder =n;
+    var divisor = 2
+    while (n>1)
     {
-        if(n%2==0)
+        while(n%divisor==0)
         {
-        factors.push(2);
-        n=n/2;
+        factors.push(divisor);
+        n=n/divisor;        
         }
-        if(n>1)
-        {
-        factors.push(n);
-        }
+        divisor++;
     }
-    else
+    if(n>1)
     {
-        return factors;
-    }
-    
+    factors.push(n);
+    }    
     return factors;
 }
    module.exports = primeFactors
